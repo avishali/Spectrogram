@@ -1,0 +1,9 @@
+build/
+build_*/
+CMakeCache.txt
+CMakeFiles/
+*.vcxproj*
+*.sln
+*.xcodeproj
+*.xcworkspace
+.DS_Store

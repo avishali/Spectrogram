@@ -1,0 +1,164 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Standalone",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build-debug/Spectrogram_artefacts/Debug/Standalone/Spectrogram.app/Contents/MacOS/Spectrogram",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build",
+            "setupCommands": [
+                {
+                    "description": "Set architecture to arm64",
+                    "text": "settings set target.arch arm64",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value no-dynamic-values",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set print options",
+                    "text": "settings set target.output-path /dev/stdout",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable expression evaluation",
+                    "text": "settings set target.process.thread.step-avoid-regexp ^std::",
+                    "ignoreFailures": true
+                }
+            ],
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "exceptions": true
+            }
+        },
+        {
+            "name": "Attach to Standalone",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/build-debug/Spectrogram_artefacts/Debug/Standalone/Spectrogram.app/Contents/MacOS/Spectrogram",
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Set architecture to arm64",
+                    "text": "settings set target.arch arm64",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value no-dynamic-values",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set print options",
+                    "text": "settings set target.output-path /dev/stdout",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable expression evaluation",
+                    "text": "settings set target.process.thread.step-avoid-regexp ^std::",
+                    "ignoreFailures": true
+                }
+            ],
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "exceptions": true
+            }
+        },
+        {
+            "name": "Attach to Host (DAW)",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${command:pickProcess}",
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Set architecture to arm64",
+                    "text": "settings set target.arch arm64",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value no-dynamic-values",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set print options",
+                    "text": "settings set target.output-path /dev/stdout",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable expression evaluation",
+                    "text": "settings set target.process.thread.step-avoid-regexp ^std::",
+                    "ignoreFailures": true
+                }
+            ],
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "exceptions": true
+            }
+        },
+        {
+            "name": "Debug VST3 Validator",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${env:JUCE_PATH}/extras/AudioPluginHost/Builds/MacOSX/build/Debug/AudioPluginHost.app/Contents/MacOS/AudioPluginHost",
+            "args": [
+                "${workspaceFolder}/build-debug/Spectrogram_artefacts/Debug/VST3/Spectrogram.vst3"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build",
+            "setupCommands": [
+                {
+                    "description": "Set architecture to arm64",
+                    "text": "settings set target.arch arm64",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.prefer-dynamic-value no-dynamic-values",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set print options",
+                    "text": "settings set target.output-path /dev/stdout",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable expression evaluation",
+                    "text": "settings set target.process.thread.step-avoid-regexp ^std::",
+                    "ignoreFailures": true
+                }
+            ],
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "exceptions": true
+            }
+        }
+    ]
+}
