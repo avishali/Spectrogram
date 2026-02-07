@@ -1,6 +1,9 @@
-build/
+build-debug/
+build-release/
 builds/
 build_*/
+.vscode/
+
 CMakeCache.txt
 CMakeFiles/
 *.vcxproj*
@@ -8,3 +11,14 @@ CMakeFiles/
 *.xcodeproj
 *.xcworkspace
 .DS_Store
+
+third_party/melechdsp-hq/builds/
+third_party/melechdsp-hq/build-debug/
+third_party/melechdsp-hq/build-release/ 
+
+third_party/melechdsp-hq/.env
+third_party/melechdsp-hq/.env.*
+third_party/melechdsp-hq/.env.example
+third_party/melechdsp-hq/claude_desktop_config.json
+
+third_party/melechdsp-hq/.gitignore
